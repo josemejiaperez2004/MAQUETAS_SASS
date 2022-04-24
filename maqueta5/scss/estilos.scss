@@ -1,0 +1,179 @@
+/*importación de libreria de bootstrap*/
+@import "../libs/bootstrap/scss/bootstrap";
+/*Llamamo el archivo donde se almacena las variables*/
+@import "../scss/otros/variables";
+/*Llamamo el archivo donde se almacena las funciones matematicas*/
+@import "../scss/otros/mixins.scss";
+
+/*estilos basicos*/
+.header{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;
+    }
+}
+.header_mini{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;
+    }
+}
+.obj1{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;
+    }
+}
+.obj2{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+.azul{
+   
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+
+.footer{
+   
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+.aside{
+   
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+
+/*De esta forma volvemos responsive la pagina (en este caso solo cambiamos el alto y color de fondo de cada objeto)*/
+
+/*Tamaño small o sm*/
+@include media-breakpoint-up(sm) { 
+    .header {
+        background-color: $color-verde;
+        @include contenido-largo(2);
+    }
+    .header_mini {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+    .obj1 {
+       background-color: $color-amarillo;
+       /*llamamos la variable de $alto, la cual se le definio un alto 
+       de 50px, y multiplicamos esa varaible por el numero 
+       que queramos. todo esto gracias a la funcion creada en mixins*/
+       @include contenido-largo(3);
+    }
+    .obj2 {
+        background-color: $color-azul;
+        @include contenido-largo(3);
+    }
+
+    .footer {
+        background-color: $color-mora;
+        @include contenido-largo(2);
+    }
+   
+    .azul {
+        background-color: $color-rojo;
+        
+    }
+
+}
+ 
+
+/*Tamaño Medium o md*/
+@include media-breakpoint-up(md) { 
+
+    .header {
+        background-color: $color-mora;
+        height: $alto * (2);
+    }
+    .header_mini {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+    .obj1{
+        background-color: $color-amarillo;
+        @include contenido-largo(2);
+
+     } 
+     .obj2 {
+         background-color: $color-azul;
+         @include contenido-largo(2);
+     }
+     .obj3 {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+
+     .footer {
+        background-color: $color-verde;
+        @include contenido-largo(2);
+    }
+
+    .aside {
+        background-color: $color-mora-md;
+        @include contenido-largo(8);
+    }
+    .azul {
+        background-color: $color-azul;
+        @include contenido-largo(2);
+        
+    }
+
+}
+
+/*Tamaño largo o lg*/
+@include media-breakpoint-up(lg) { 
+
+    .header {
+        background-color: $color-azul;
+        @include contenido-largo(2);
+    }
+    .header_mini {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+    .obj1{
+        background-color: $color-verde;
+        @include contenido-largo(2);
+
+     } 
+     .obj2 {
+         background-color: $color-amarillo;
+         @include contenido-largo(2);
+     }
+
+    .footer {
+        background-color: $color-verde;
+        @include contenido-largo(2);
+    }
+
+    .aside {
+        background-color: $color-mora-md;
+        @include contenido-largo(8);
+    }
+    .azul {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+}
+
+@media (max-width:767px){
+    .aside {
+        display:none;
+    }
+}

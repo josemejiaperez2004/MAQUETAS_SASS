@@ -1,0 +1,8 @@
+@mixin contenido-largo($valor) {
+    height: $alto*$valor;
+  
+}
+@mixin contenido-ancho($valor) {
+    width: $ancho*$valor;
+  
+}

@@ -1,0 +1,125 @@
+/*importación de libreria de bootstrap*/
+@import "../libs/bootstrap/scss/bootstrap";
+/*Llamamo el archivo donde se almacena las variables*/
+@import "../scss/otros/variables";
+/*Llamamo el archivo donde se almacena las funciones matematicas*/
+@import "../scss/otros/mixins.scss";
+
+/*estilos basicos*/
+.obj1{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;
+    }
+}
+.obj2{
+    
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+.obj3{
+   
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+
+.obj4{
+   
+    h1{
+        color: $color-texto;
+        text-align: center;  
+    }
+}
+/*De esta forma volvemos responsive la pagina (en este caso solo cambiamos el alto y color de fondo de cada objeto)*/
+
+/*Tamaño small o sm*/
+@include media-breakpoint-up(sm) { 
+    .obj1 {
+       background-color: $color-amarillo;
+       /*llamamos la variable de $alto, la cual se le definio un alto 
+       de 50px, y multiplicamos esa varaible por el numero 
+       que queramos. todo esto gracias a la funcion creada en mixins*/
+       @include contenido-largo(4);
+    }
+    .obj2 {
+        background-color: $color-azul;
+        @include contenido-largo(3);
+    }
+    .obj3 {
+        background-color: $color-rojo;
+        @include contenido-largo(2);
+    }
+
+    .obj4 {
+        background-color: $color-verde;
+        @include contenido-largo(2);
+    }
+}
+/*Tamaño Medium o md*/
+@include media-breakpoint-up(md) { 
+    .obj1{
+        background-color: $color-verde;
+        @include contenido-largo(4);
+
+     } 
+     .obj2, .obj3  {
+         background-color: $color-amarillo;
+         @include contenido-largo(3);
+     }
+     
+
+    .obj4 {
+        background-color: $color-rojo;
+        @include contenido-largo(3);
+    }
+
+}
+
+/*Tamaño largo o lg*/
+@include media-breakpoint-up(lg) { 
+    .obj1{
+        background-color: $color-verde;
+        @include contenido-largo(2);
+
+     } 
+     .obj2 {
+         background-color: $color-amarillo;
+         @include contenido-largo(3);
+     }
+     .obj3 {
+        background-color: $color-azul;
+        @include contenido-largo(3);
+    }
+
+    .obj4 {
+        background-color: $color-rojo;
+        @include contenido-largo(3);
+    }
+
+}
+
+/*Tamaño extra largo o xl*/
+@include media-breakpoint-up(xl) { 
+    .obj1 {
+        background-color: $color-amarillo;
+        @include contenido-largo(1);
+     }
+     .obj2 {
+        background-color: $color-azul;
+        @include contenido-largo(2);
+    }
+    .obj3 {
+        background-color: $color-rojo;
+        @include contenido-largo(3);
+    }
+    .obj4 {
+        background-color: $color-verde;
+        @include contenido-largo(4);
+    }
+
+}

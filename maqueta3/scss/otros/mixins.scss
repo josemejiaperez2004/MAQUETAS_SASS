@@ -1,0 +1,4 @@
+@mixin contenido-largo($valor) {
+    height: $alto*$valor;
+    width: $ancho*$valor;
+}
