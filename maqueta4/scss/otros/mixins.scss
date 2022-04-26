@@ -1,4 +1,5 @@
-//El mixins hecho cambia el tamaño (heigth) de acuerdo al valor dado en variables //@mixin contenido-largo($valor) {
+//El mixins hecho cambia el tamaño (heigth) de acuerdo al valor dado en variables//
+@mixin contenido-largo($valor) {
     height: $alto*$valor;
     width: $ancho*$valor;
 }
