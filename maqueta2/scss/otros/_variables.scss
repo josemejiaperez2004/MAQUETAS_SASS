@@ -8,7 +8,4 @@ $color-texto: rgb(255, 255, 255);
 $alto: 50px;
 $ancho: 50px;
 
-@mixin contenido-largo($valor) {
-    height: $alto*$valor;
-    width: $ancho*$valor;
-}
+
